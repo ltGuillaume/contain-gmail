@@ -306,18 +306,9 @@ async function maybeReopenAlreadyOpenTabs () {
   });
 }
 
-function stripFbclid(url) {
-  const strippedUrl = new URL(url);
-  strippedUrl.searchParams.delete("fbclid");
-  return strippedUrl.href;
-}
-
 async function containGmail (options) {
   const url = new URL(options.url);
   const urlSearchParm = new URLSearchParams(url.search);
-  if (urlSearchParm.has("fbclid")) {
-    return {redirectUrl: stripFbclid(options.url)};
-  }
   // Listen to requests and open Gmail into its Container,
   // open other sites into the default tab context
   if (options.tabId === -1) {

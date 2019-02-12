@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "Facebook Container",
+    "name": "Gmail Container",
     "version": "1.4.2",
 
-    "description": "Facebook Container isolates your Facebook activity from the rest of your web activity in order to prevent Facebook from tracking you outside of the Facebook website via third party cookies.",
+    "description": "Gmail Container prevents Google from logging you on for all its services: only Gmail and Calendar will be opened in a separate container, while other Google services will not.",
 
     "icons": {
         "48": "icon.svg",
@@ -12,12 +12,12 @@
 
     "applications": {
       "gecko": {
-        "id": "@contain-facebook",
+        "id": "@contain-gmail",
         "strict_min_version": "57.0"
       }
     },
 
-    "homepage_url": "https://github.com/mozilla/contain-facebook",
+    "homepage_url": "https://github.com/ltGuillaume/contain-gmail",
 
     "permissions": [
         "<all_urls>",

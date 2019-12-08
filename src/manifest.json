@@ -12,8 +12,8 @@
 
     "applications": {
       "gecko": {
-        "id": "@contain-gmail",
-        "strict_min_version": "57.0"
+        "id": "@asymm_contain-gmail",
+        "strict_min_version": "56.0"
       }
     },
 

@@ -3,9 +3,20 @@ const GMAIL_CONTAINER_NAME = "Gmail";
 const GMAIL_CONTAINER_COLOR = "red";
 const GMAIL_CONTAINER_ICON = "fingerprint";
 const GMAIL_DOMAINS = [
-  "accounts.google.com",
-  "calendar.google.com",
-  "mail.google.com", "gmail.com", "www.gmail.com"
+  "accounts.google.com", "accounts.google.nl",
+  "accounts.youtube.com", "accounts.youtube.nl",
+  "calendar.google.com", "calendar.google.nl",
+  "console.developers.google.com",
+  "contacts.google.com", "contacts.google.nl",
+  "gmail.com", "gmail.nl",
+  "google.com/calendar/", "google.nl/calendar/",
+  "google.com/gmail/", "google.nl/gmail/",
+  "mail.google.com", "mail.google.nl",
+  "myaccount.google.com", "myaccount.google.nl",
+  "takeout.google.com", "takeout.google.nl",
+  "www.gmail.com", "www.gmail.nl",
+  "www.google.com/calendar/", "www.google.nl/calendar/",
+  "www.google.com/gmail/", "www.google.nl/gmail/"
 ];
 
 const MAC_ADDON_ID = "@testpilot-containers";
@@ -307,8 +318,6 @@ async function maybeReopenAlreadyOpenTabs () {
 }
 
 async function containGmail (options) {
-  const url = new URL(options.url);
-  const urlSearchParm = new URLSearchParams(url.search);
   // Listen to requests and open Gmail into its Container,
   // open other sites into the default tab context
   if (options.tabId === -1) {
